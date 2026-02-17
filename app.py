@@ -76,7 +76,7 @@ if uploaded_file is not None:
     confidence = float(np.max(prediction)) * 100
 
     # Show results
-    st.subheader("🔍 Prediction Result")
+    st.subheader("Prediction Result")
     st.success(f"Predicted Disease: {class_names[predicted_class]}")
     st.progress(int(confidence))
     st.write(f"Confidence: {confidence:.2f}%")
@@ -88,3 +88,4 @@ if uploaded_file is not None:
     st.write(f"**Description:** {info['description']}")
     st.write(f"**Risk Level:** {info['risk']}")
     st.write(f"**Recommendation:** {info['advice']}")
+
