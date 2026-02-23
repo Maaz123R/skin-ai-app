@@ -66,7 +66,7 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image", use_container_width=True)
 
     # Preprocess image
-    image_resized = image.resize((28, 28))
+    image_resized = image.resize((64, 64))
     image_array = np.array(image_resized) / 255.0
     image_array = image_array.reshape(1, 28, 28, 3)
 
@@ -88,4 +88,5 @@ if uploaded_file is not None:
     st.write(f"**Description:** {info['description']}")
     st.write(f"**Risk Level:** {info['risk']}")
     st.write(f"**Recommendation:** {info['advice']}")
+
 
